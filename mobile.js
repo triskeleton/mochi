@@ -65,9 +65,12 @@ class Paper {
       this.prevTouchX = this.touchStartX;
       this.prevTouchY = this.touchStartY;
     });
+    
     paper.addEventListener('touchend', () => {
       this.holdingPaper = false;
       this.rotating = false;
+      this.prevTouchX = 0;
+      this.prevTouchY = 0;
     });
 
     // For two-finger rotation on touch screens
